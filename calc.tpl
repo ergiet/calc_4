@@ -1,10 +1,7 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>Kalkulator kredytowy</title>
-	</head>
-	<body>
+{extends file="main.tpl"}
+
+{block name= content}
+
 		<table>
 				<tr>
 					<th>Jesteś zalogowany jako: <?php echo "$role"?></th>
@@ -29,5 +26,5 @@
 				</tr>
 		</table>
 		</form>
-	</body>
-</html>
+
+{/block}

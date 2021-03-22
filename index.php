@@ -6,7 +6,9 @@
 	</head>
 	<body>
 		<?php
+			require_once 'libs/Smarty.class.php';
 			session_start();
+			$_SESSION['role'] = 'admin';
 			$role = isset($_SESSION['role']) ? $_SESSION['role'] : '';
 
 			//sprawdzenie czy wymagane jest logowanie
@@ -14,7 +16,13 @@
 				include 'login.php';
 				exit();
 			}
-			include 'calc.php';
+
+
+			$smarty = new Smarty();
+
+            $smarty -> display('calc.tpl');
+
+			//include 'calc.tpl';
 		?>
 	</body>
 </html>
